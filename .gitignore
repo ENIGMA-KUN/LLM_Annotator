@@ -1,0 +1,65 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+credentials.json
+secrets.json
+.vercel
+
+# Research data, prompts and papers are not distributed (see the README)
+/Data/*
+!/Data/README.md
+!/Data/schema/
+/Paper/
+/prompts/
+*.csv
+*.xlsx
+!dashboard/**/*.csv
+*.docx
+*.pptx
+*.pdf
+
+# Generated from Data/ by scripts/build_findings_data.py
+dashboard/src/data/findingsData.js
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+dashboard/dist/
+dashboard/.vite/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# Scratch output
+*.log
+tmp/
+temp/
+/outputs/

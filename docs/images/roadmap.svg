@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" width="860" height="560" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Where the project is</title>
+<desc id="d">Research status. Done: 45 configurations: 3 models, 3 prompts, 5 criteria, 3 runs each; Expert ceiling on all 200 questions, with intervals; Routing protocol with blind expert review and label provenance; Targeted review beats random: alpha 0.762 vs 0.659 at a 30% budget (Relevance); Fairness audit by subject, difficulty and passage length; Negative result: automated prompt optimisation collapses to constant scores. In progress: Retrieval few-shot: an offline probe finds label signal for Relevance and Plausibility; Rubric rewrite from holistic 1 to 4 levels to atomic yes/no checks; Checking that each prompt shows the model the same object the experts judged. Next: Live A/B test on Semantic Plausibility, about 40 questions × 3 runs; Live pairwise judge on the three criteria that stay with experts; Grow the benchmark to about 300 questions to tighten the intervals; Link quality scores to student performance data.</desc>
+<style>
+  .bg{fill:#ffffff;stroke:#d0d7de}.ink{fill:#1f2328}.ink2{fill:#59636e}.muted{fill:#6e7781}
+  .box{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+  .grid{stroke:#eaeef2;stroke-width:1}.zero{stroke:#8c959f;stroke-width:1}
+  .gate{stroke:#1f2328;stroke-width:1.5;stroke-dasharray:4 4}
+  .llm{fill:#a12f55}.exp{fill:#4f82c4}.rule{fill:#ffc627}
+  .llmT{fill:#a12f55;fill-opacity:.10;stroke:#a12f55;stroke-width:1.5}
+  .llmF{fill:#a12f55;fill-opacity:.06;stroke:#a12f55;stroke-width:1.5;stroke-dasharray:5 3}
+  .expT{fill:#4f82c4;fill-opacity:.10;stroke:#4f82c4;stroke-width:1.5}
+  .arrow{stroke:#8c959f;stroke-width:1.5;fill:none}.head{fill:#8c959f}
+  .tick{stroke:#1f2328;stroke-width:1.5}
+  .dotFull{fill:#1f2328}.dotRing{fill:none;stroke:#1f2328;stroke-width:1.5}
+  .ci line{stroke:#1f2328;stroke-width:1.5;stroke-opacity:.7}
+  .tnum{font-variant-numeric:tabular-nums}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#161b22;stroke:#30363d}.ink{fill:#e6edf3}.ink2{fill:#9da7b3}.muted{fill:#848d97}
+    .box{fill:#0d1117;stroke:#30363d}
+    .grid{stroke:#21262d}.zero{stroke:#6e7681}.gate{stroke:#e6edf3}
+    .llm{fill:#d9577a}.exp{fill:#5f97d8}
+    .llmT{fill:#d9577a;fill-opacity:.16;stroke:#d9577a}
+    .llmF{fill:#d9577a;fill-opacity:.08;stroke:#d9577a}
+    .expT{fill:#5f97d8;fill-opacity:.16;stroke:#5f97d8}
+    .arrow{stroke:#6e7681}.head{fill:#6e7681}.tick{stroke:#e6edf3}
+    .dotFull{fill:#e6edf3}.dotRing{stroke:#e6edf3}.ci line{stroke:#e6edf3}
+  }
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="859" height="559" rx="12"/>
+<rect class="rule" x="32" y="28" width="44" height="4" rx="2"/>
+<text class="ink" x="32" y="62" font-size="22" font-weight="600">Where the project is</text>
+<text class="ink2" x="32.0" y="86.0" font-size="13">Two criteria are automated behind a check. The open work is on the three that are not.</text>
+<rect class="box" x="32.0" y="112.0" width="252.0" height="392" rx="10"/>
+<text class="ink" x="50.0" y="144.0" font-size="15" font-weight="600">Done</text>
+<text class="muted tnum" x="266.0" y="144.0" font-size="13" text-anchor="end">6</text>
+<circle class="dotFull" cx="56.0" cy="169.5" r="4.5"/>
+<text class="ink2" x="70.0" y="174.0" font-size="12.5">45 configurations: 3 models, 3</text>
+<text class="ink2" x="70.0" y="191.0" font-size="12.5">prompts, 5 criteria, 3 runs each</text>
+<circle class="dotFull" cx="56.0" cy="217.5" r="4.5"/>
+<text class="ink2" x="70.0" y="222.0" font-size="12.5">Expert ceiling on all 200</text>
+<text class="ink2" x="70.0" y="239.0" font-size="12.5">questions, with intervals</text>
+<circle class="dotFull" cx="56.0" cy="265.5" r="4.5"/>
+<text class="ink2" x="70.0" y="270.0" font-size="12.5">Routing protocol with blind expert</text>
+<text class="ink2" x="70.0" y="287.0" font-size="12.5">review and label provenance</text>
+<circle class="dotFull" cx="56.0" cy="313.5" r="4.5"/>
+<text class="ink2" x="70.0" y="318.0" font-size="12.5">Targeted review beats random:</text>
+<text class="ink2" x="70.0" y="335.0" font-size="12.5">alpha 0.762 vs 0.659 at a 30%</text>
+<text class="ink2" x="70.0" y="352.0" font-size="12.5">budget (Relevance)</text>
+<circle class="dotFull" cx="56.0" cy="378.5" r="4.5"/>
+<text class="ink2" x="70.0" y="383.0" font-size="12.5">Fairness audit by subject,</text>
+<text class="ink2" x="70.0" y="400.0" font-size="12.5">difficulty and passage length</text>
+<circle class="dotFull" cx="56.0" cy="426.5" r="4.5"/>
+<text class="ink2" x="70.0" y="431.0" font-size="12.5">Negative result: automated prompt</text>
+<text class="ink2" x="70.0" y="448.0" font-size="12.5">optimisation collapses to constant</text>
+<text class="ink2" x="70.0" y="465.0" font-size="12.5">scores</text>
+<rect class="box" x="304.0" y="112.0" width="252.0" height="392" rx="10"/>
+<text class="ink" x="322.0" y="144.0" font-size="15" font-weight="600">In progress</text>
+<text class="muted tnum" x="538.0" y="144.0" font-size="13" text-anchor="end">3</text>
+<circle class="dotRing" cx="328.0" cy="169.5" r="4"/>
+<path class="dotFull" d="M328.0,165.5 A4,4 0 0 0 328.0,173.5 Z"/>
+<text class="ink2" x="342.0" y="174.0" font-size="12.5">Retrieval few-shot: an offline</text>
+<text class="ink2" x="342.0" y="191.0" font-size="12.5">probe finds label signal for</text>
+<text class="ink2" x="342.0" y="208.0" font-size="12.5">Relevance and Plausibility</text>
+<circle class="dotRing" cx="328.0" cy="234.5" r="4"/>
+<path class="dotFull" d="M328.0,230.5 A4,4 0 0 0 328.0,238.5 Z"/>
+<text class="ink2" x="342.0" y="239.0" font-size="12.5">Rubric rewrite from holistic 1 to</text>
+<text class="ink2" x="342.0" y="256.0" font-size="12.5">4 levels to atomic yes/no checks</text>
+<circle class="dotRing" cx="328.0" cy="282.5" r="4"/>
+<path class="dotFull" d="M328.0,278.5 A4,4 0 0 0 328.0,286.5 Z"/>
+<text class="ink2" x="342.0" y="287.0" font-size="12.5">Checking that each prompt shows</text>
+<text class="ink2" x="342.0" y="304.0" font-size="12.5">the model the same object the</text>
+<text class="ink2" x="342.0" y="321.0" font-size="12.5">experts judged</text>
+<rect class="box" x="576.0" y="112.0" width="252.0" height="392" rx="10"/>
+<text class="ink" x="594.0" y="144.0" font-size="15" font-weight="600">Next</text>
+<text class="muted tnum" x="810.0" y="144.0" font-size="13" text-anchor="end">4</text>
+<circle class="dotRing" cx="600.0" cy="169.5" r="4"/>
+<text class="ink2" x="614.0" y="174.0" font-size="12.5">Live A/B test on Semantic</text>
+<text class="ink2" x="614.0" y="191.0" font-size="12.5">Plausibility, about 40 questions ×</text>
+<text class="ink2" x="614.0" y="208.0" font-size="12.5">3 runs</text>
+<circle class="dotRing" cx="600.0" cy="234.5" r="4"/>
+<text class="ink2" x="614.0" y="239.0" font-size="12.5">Live pairwise judge on the three</text>
+<text class="ink2" x="614.0" y="256.0" font-size="12.5">criteria that stay with experts</text>
+<circle class="dotRing" cx="600.0" cy="282.5" r="4"/>
+<text class="ink2" x="614.0" y="287.0" font-size="12.5">Grow the benchmark to about 300</text>
+<text class="ink2" x="614.0" y="304.0" font-size="12.5">questions to tighten the intervals</text>
+<circle class="dotRing" cx="600.0" cy="330.5" r="4"/>
+<text class="ink2" x="614.0" y="335.0" font-size="12.5">Link quality scores to student</text>
+<text class="ink2" x="614.0" y="352.0" font-size="12.5">performance data</text>
+<text class="muted" x="32.0" y="534.0" font-size="11.5">Filled: done. Half: in progress. Ring: next. Details in docs/RESEARCH_STATUS.md.</text>
+</svg>

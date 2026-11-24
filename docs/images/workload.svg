@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 410" width="860" height="410" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">What the routing saves</title>
+<desc id="d">Replaying real scores through the routing hands 35.4% of 1,000 decisions to the LLM. Measured on the test split with the best setups: 38.0%. Ceiling with 2 of 5 criteria automated: 40%.</desc>
+<style>
+  .bg{fill:#ffffff;stroke:#d0d7de}.ink{fill:#1f2328}.ink2{fill:#59636e}.muted{fill:#6e7781}
+  .box{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+  .grid{stroke:#eaeef2;stroke-width:1}.zero{stroke:#8c959f;stroke-width:1}
+  .gate{stroke:#1f2328;stroke-width:1.5;stroke-dasharray:4 4}
+  .llm{fill:#a12f55}.exp{fill:#4f82c4}.rule{fill:#ffc627}
+  .llmT{fill:#a12f55;fill-opacity:.10;stroke:#a12f55;stroke-width:1.5}
+  .llmF{fill:#a12f55;fill-opacity:.06;stroke:#a12f55;stroke-width:1.5;stroke-dasharray:5 3}
+  .expT{fill:#4f82c4;fill-opacity:.10;stroke:#4f82c4;stroke-width:1.5}
+  .arrow{stroke:#8c959f;stroke-width:1.5;fill:none}.head{fill:#8c959f}
+  .tick{stroke:#1f2328;stroke-width:1.5}
+  .dotFull{fill:#1f2328}.dotRing{fill:none;stroke:#1f2328;stroke-width:1.5}
+  .ci line{stroke:#1f2328;stroke-width:1.5;stroke-opacity:.7}
+  .tnum{font-variant-numeric:tabular-nums}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#161b22;stroke:#30363d}.ink{fill:#e6edf3}.ink2{fill:#9da7b3}.muted{fill:#848d97}
+    .box{fill:#0d1117;stroke:#30363d}
+    .grid{stroke:#21262d}.zero{stroke:#6e7681}.gate{stroke:#e6edf3}
+    .llm{fill:#d9577a}.exp{fill:#5f97d8}
+    .llmT{fill:#d9577a;fill-opacity:.16;stroke:#d9577a}
+    .llmF{fill:#d9577a;fill-opacity:.08;stroke:#d9577a}
+    .expT{fill:#5f97d8;fill-opacity:.16;stroke:#5f97d8}
+    .arrow{stroke:#6e7681}.head{fill:#6e7681}.tick{stroke:#e6edf3}
+    .dotFull{fill:#e6edf3}.dotRing{stroke:#e6edf3}.ci line{stroke:#e6edf3}
+  }
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="859" height="409" rx="12"/>
+<rect class="rule" x="32" y="28" width="44" height="4" rx="2"/>
+<text class="ink" x="32" y="62" font-size="22" font-weight="600">What the routing saves</text>
+<text class="ink2" x="32.0" y="86.0" font-size="13">200 questions × 5 criteria = 1,000 scoring decisions that would otherwise all go to experts.</text>
+<path class="llm" d="M38.0,142.0 H312.784 V176.0 H38.0 Q32.0,176.0 32.0,170.0 V148.0 Q32.0,142.0 38.0,142.0 Z"/>
+<path class="exp" d="M314.784,142.0 H822.0 Q828.0,142.0 828.0,148.0 V170.0 Q828.0,176.0 822.0,176.0 H314.784 Z"/>
+<text class="ink" x="32.0" y="130.0" font-size="13" font-weight="600">35.4%  LLM label kept</text>
+<text class="ink" x="828.0" y="130.0" font-size="13" font-weight="600" text-anchor="end">64.6%  expert decides</text>
+<line class="tick" x1="334.5" y1="180.0" x2="334.5" y2="194.0"/>
+<line class="tick" x1="350.4" y1="180.0" x2="350.4" y2="208.0"/>
+<text class="ink2" x="328.5" y="193.0" font-size="12" text-anchor="end">38% on the test split</text>
+<text class="ink2" x="356.4" y="207.0" font-size="12">40% ceiling: 2 of 5 criteria fully automated</text>
+<rect class="box" x="32.0" y="232.0" width="252.0" height="112" rx="10"/>
+<text class="ink" x="50.0" y="278.0" font-size="32" font-weight="600">35%</text>
+<text class="ink2" x="50.0" y="304.0" font-size="12.5">fewer expert decisions when real</text>
+<text class="ink2" x="50.0" y="321.0" font-size="12.5">scores are replayed through the routing</text>
+<rect class="box" x="304.0" y="232.0" width="252.0" height="112" rx="10"/>
+<text class="ink" x="322.0" y="278.0" font-size="32" font-weight="600">2 of 5</text>
+<text class="ink2" x="322.0" y="304.0" font-size="12.5">criteria go to the LLM;</text>
+<text class="ink2" x="322.0" y="321.0" font-size="12.5">the other three stay with experts</text>
+<rect class="box" x="576.0" y="232.0" width="252.0" height="112" rx="10"/>
+<text class="ink" x="594.0" y="278.0" font-size="32" font-weight="600">under $5</text>
+<text class="ink2" x="594.0" y="304.0" font-size="12.5">per 100 questions, 3 runs each</text>
+<text class="ink2" x="594.0" y="321.0" font-size="12.5">($0.05 to $4.44 across logged runs)</text>
+<text class="muted" x="32.0" y="376.0" font-size="11.5">Kept labels include 2 of 3 majorities, which are flagged for a spot check. Counting unanimous runs only gives 26.4% on the test split.</text>
+<text class="muted" x="32.0" y="392.0" font-size="11.5">Cost from 5 logged experiment cells; cheapest Gemini 2.5 Flash-Lite, most expensive GPT-5.4.</text>
+</svg>

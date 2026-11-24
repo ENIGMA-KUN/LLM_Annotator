@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 548" width="860" height="548" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Where an LLM can stand in for an expert</title>
+<desc id="d">Krippendorff alpha per criterion. Linguistic Feature: experts 0.835, best LLM 0.536 (Gemini 2.5 Flash, zero-shot); Topic Relevance: experts 0.741, best LLM 0.505 (GPT-5.4, rubric prompt); Semantic Uniqueness: experts 0.855, best LLM 0.259 (Gemini 2.5 Flash, zero-shot); Semantic Plausibility: experts 0.769, best LLM 0.219 (GPT-5.4, zero-shot); Writing Clarity: experts 0.873, best LLM -0.088 (GPT-5.4, rubric prompt). Automation gate at 0.50.</desc>
+<style>
+  .bg{fill:#ffffff;stroke:#d0d7de}.ink{fill:#1f2328}.ink2{fill:#59636e}.muted{fill:#6e7781}
+  .box{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+  .grid{stroke:#eaeef2;stroke-width:1}.zero{stroke:#8c959f;stroke-width:1}
+  .gate{stroke:#1f2328;stroke-width:1.5;stroke-dasharray:4 4}
+  .llm{fill:#a12f55}.exp{fill:#4f82c4}.rule{fill:#ffc627}
+  .llmT{fill:#a12f55;fill-opacity:.10;stroke:#a12f55;stroke-width:1.5}
+  .llmF{fill:#a12f55;fill-opacity:.06;stroke:#a12f55;stroke-width:1.5;stroke-dasharray:5 3}
+  .expT{fill:#4f82c4;fill-opacity:.10;stroke:#4f82c4;stroke-width:1.5}
+  .arrow{stroke:#8c959f;stroke-width:1.5;fill:none}.head{fill:#8c959f}
+  .tick{stroke:#1f2328;stroke-width:1.5}
+  .dotFull{fill:#1f2328}.dotRing{fill:none;stroke:#1f2328;stroke-width:1.5}
+  .ci line{stroke:#1f2328;stroke-width:1.5;stroke-opacity:.7}
+  .tnum{font-variant-numeric:tabular-nums}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#161b22;stroke:#30363d}.ink{fill:#e6edf3}.ink2{fill:#9da7b3}.muted{fill:#848d97}
+    .box{fill:#0d1117;stroke:#30363d}
+    .grid{stroke:#21262d}.zero{stroke:#6e7681}.gate{stroke:#e6edf3}
+    .llm{fill:#d9577a}.exp{fill:#5f97d8}
+    .llmT{fill:#d9577a;fill-opacity:.16;stroke:#d9577a}
+    .llmF{fill:#d9577a;fill-opacity:.08;stroke:#d9577a}
+    .expT{fill:#5f97d8;fill-opacity:.16;stroke:#5f97d8}
+    .arrow{stroke:#6e7681}.head{fill:#6e7681}.tick{stroke:#e6edf3}
+    .dotFull{fill:#e6edf3}.dotRing{stroke:#e6edf3}.ci line{stroke:#e6edf3}
+  }
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="859" height="547" rx="12"/>
+<rect class="rule" x="32" y="28" width="44" height="4" rx="2"/>
+<text class="ink" x="32" y="62" font-size="22" font-weight="600">Where an LLM can stand in for an expert</text>
+<text class="ink2" x="32.0" y="86.0" font-size="13">Agreement on five quality criteria for multiple-choice questions, measured as Krippendorff's alpha (ordinal).</text>
+<rect class="llm" x="32" y="108" width="12" height="12" rx="3"/>
+<text class="ink2" x="50.0" y="118.0" font-size="12.5">LLM, best of 3 models × 3 prompts</text>
+<rect class="exp" x="282" y="108" width="12" height="12" rx="3"/>
+<text class="ink2" x="300.0" y="118.0" font-size="12.5">Expert vs. expert</text>
+<g class="ci"><line x1="430" y1="114" x2="452" y2="114"/><line x1="430" y1="110" x2="430" y2="118"/><line x1="452" y1="110" x2="452" y2="118"/></g>
+<text class="ink2" x="460.0" y="118.0" font-size="12.5">95% interval</text>
+<line class="grid" x1="483.7" y1="146.0" x2="483.7" y2="452.0"/>
+<line class="grid" x1="685.2" y1="146.0" x2="685.2" y2="452.0"/>
+<line class="grid" x1="786.0" y1="146.0" x2="786.0" y2="452.0"/>
+<line class="zero" x1="382.9" y1="146.0" x2="382.9" y2="452.0"/>
+<text class="ink" x="32.0" y="172.0" font-size="14" font-weight="600">Linguistic Feature</text>
+<text class="ink2" x="32.0" y="190.0" font-size="12">LLM scores, then an agreement check</text>
+<path class="llm" d="M382.9,160.0 H595.0 Q599.0,160.0 599.0,164.0 V168.0 Q599.0,172.0 595.0,172.0 H382.9 Z"/>
+<g class="ci"><line x1="529.4" y1="166.0" x2="655.4" y2="166.0"/><line x1="529.4" y1="162.0" x2="529.4" y2="170.0"/><line x1="655.4" y1="162.0" x2="655.4" y2="170.0"/></g>
+<text class="ink tnum" x="663.4" y="170.0" font-size="12" font-weight="600">0.536</text>
+<path class="exp" d="M382.9,174.0 H715.4 Q719.4,174.0 719.4,178.0 V182.0 Q719.4,186.0 715.4,186.0 H382.9 Z"/>
+<g class="ci"><line x1="699.1" y1="180.0" x2="735.9" y2="180.0"/><line x1="699.1" y1="176.0" x2="699.1" y2="184.0"/><line x1="735.9" y1="176.0" x2="735.9" y2="184.0"/></g>
+<text class="ink2 tnum" x="743.9" y="184.0" font-size="12">0.835</text>
+<text class="ink" x="32.0" y="232.0" font-size="14" font-weight="600">Topic Relevance</text>
+<text class="ink2" x="32.0" y="250.0" font-size="12">LLM scores, then an agreement check</text>
+<path class="llm" d="M382.9,220.0 H582.4 Q586.4,220.0 586.4,224.0 V228.0 Q586.4,232.0 582.4,232.0 H382.9 Z"/>
+<g class="ci"><line x1="506.4" y1="226.0" x2="652.0" y2="226.0"/><line x1="506.4" y1="222.0" x2="506.4" y2="230.0"/><line x1="652.0" y1="222.0" x2="652.0" y2="230.0"/></g>
+<text class="ink tnum" x="660.0" y="230.0" font-size="12" font-weight="600">0.505</text>
+<path class="exp" d="M382.9,234.0 H677.5 Q681.5,234.0 681.5,238.0 V242.0 Q681.5,246.0 677.5,246.0 H382.9 Z"/>
+<g class="ci"><line x1="645.0" y1="240.0" x2="709.6" y2="240.0"/><line x1="645.0" y1="236.0" x2="645.0" y2="244.0"/><line x1="709.6" y1="236.0" x2="709.6" y2="244.0"/></g>
+<text class="ink2 tnum" x="717.6" y="244.0" font-size="12">0.741</text>
+<text class="ink" x="32.0" y="292.0" font-size="14" font-weight="600">Semantic Uniqueness</text>
+<text class="ink2" x="32.0" y="310.0" font-size="12">Experts decide</text>
+<path class="llm" d="M382.9,280.0 H483.2 Q487.2,280.0 487.2,284.0 V288.0 Q487.2,292.0 483.2,292.0 H382.9 Z"/>
+<g class="ci"><line x1="377.6" y1="286.0" x2="593.5" y2="286.0"/><line x1="377.6" y1="282.0" x2="377.6" y2="290.0"/><line x1="593.5" y1="282.0" x2="593.5" y2="290.0"/></g>
+<text class="ink tnum" x="601.5" y="290.0" font-size="12" font-weight="600">0.259</text>
+<path class="exp" d="M382.9,294.0 H723.7 Q727.7,294.0 727.7,298.0 V302.0 Q727.7,306.0 723.7,306.0 H382.9 Z"/>
+<g class="ci"><line x1="688.1" y1="300.0" x2="760.2" y2="300.0"/><line x1="688.1" y1="296.0" x2="688.1" y2="304.0"/><line x1="760.2" y1="296.0" x2="760.2" y2="304.0"/></g>
+<text class="ink2 tnum" x="768.2" y="304.0" font-size="12">0.855</text>
+<text class="ink" x="32.0" y="352.0" font-size="14" font-weight="600">Semantic Plausibility</text>
+<text class="ink2" x="32.0" y="370.0" font-size="12">Experts decide</text>
+<path class="llm" d="M382.9,340.0 H467.2 Q471.2,340.0 471.2,344.0 V348.0 Q471.2,352.0 467.2,352.0 H382.9 Z"/>
+<g class="ci"><line x1="393.7" y1="346.0" x2="536.9" y2="346.0"/><line x1="393.7" y1="342.0" x2="393.7" y2="350.0"/><line x1="536.9" y1="342.0" x2="536.9" y2="350.0"/></g>
+<text class="ink tnum" x="544.9" y="350.0" font-size="12" font-weight="600">0.219</text>
+<path class="exp" d="M382.9,354.0 H689.1 Q693.1,354.0 693.1,358.0 V362.0 Q693.1,366.0 689.1,366.0 H382.9 Z"/>
+<g class="ci"><line x1="666.2" y1="360.0" x2="715.4" y2="360.0"/><line x1="666.2" y1="356.0" x2="666.2" y2="364.0"/><line x1="715.4" y1="356.0" x2="715.4" y2="364.0"/></g>
+<text class="ink2 tnum" x="723.4" y="364.0" font-size="12">0.769</text>
+<text class="ink" x="32.0" y="412.0" font-size="14" font-weight="600">Writing Clarity</text>
+<text class="ink2" x="32.0" y="430.0" font-size="12">Experts decide</text>
+<path class="llm" d="M382.9,400.0 H351.5 Q347.5,400.0 347.5,404.0 V408.0 Q347.5,412.0 351.5,412.0 H382.9 Z"/>
+<g class="ci"><line x1="291.9" y1="406.0" x2="399.5" y2="406.0"/><line x1="291.9" y1="402.0" x2="291.9" y2="410.0"/><line x1="399.5" y1="402.0" x2="399.5" y2="410.0"/></g>
+<text class="ink tnum" x="407.5" y="410.0" font-size="12" font-weight="600">−0.088</text>
+<path class="exp" d="M382.9,414.0 H730.7 Q734.7,414.0 734.7,418.0 V422.0 Q734.7,426.0 730.7,426.0 H382.9 Z"/>
+<g class="ci"><line x1="706.7" y1="420.0" x2="757.3" y2="420.0"/><line x1="706.7" y1="416.0" x2="706.7" y2="424.0"/><line x1="757.3" y1="416.0" x2="757.3" y2="424.0"/></g>
+<text class="ink2 tnum" x="765.3" y="424.0" font-size="12">0.873</text>
+<line class="gate" x1="584.5" y1="138.0" x2="584.5" y2="456.0"/>
+<text class="ink" x="584.5" y="132.0" font-size="12" font-weight="600" text-anchor="middle">0.50 automation gate</text>
+<text class="muted tnum" x="382.9" y="474.0" font-size="11.5" text-anchor="middle">0.00</text>
+<text class="muted tnum" x="483.7" y="474.0" font-size="11.5" text-anchor="middle">0.25</text>
+<text class="muted tnum" x="584.5" y="474.0" font-size="11.5" text-anchor="middle">0.50</text>
+<text class="muted tnum" x="685.2" y="474.0" font-size="11.5" text-anchor="middle">0.75</text>
+<text class="muted tnum" x="786.0" y="474.0" font-size="11.5" text-anchor="middle">1.00</text>
+<text class="muted" x="382.9" y="492.0" font-size="11.5">0 is chance agreement, 1 is perfect</text>
+<text class="muted" x="32.0" y="514.0" font-size="11.5">Experts: 200 questions from four OpenStax textbooks, two trained raters, 1 to 4 scale. LLM: 100-question test split, 3 runs</text>
+<text class="muted" x="32.0" y="530.0" font-size="11.5">per question; each criterion shows its best of 9 setups, so the bars are an upper estimate. Intervals are item-level bootstrap.</text>
+</svg>

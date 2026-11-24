@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   Apple craft, ASU brand. See DESIGN_SYSTEM.md.
+   Apple governs structure, type, motion and materials. ASU governs colour.
+   ========================================================================= */
+
+@layer base {
+  :root {
+    --asu-maroon: #8c1d40;
+    --asu-gold: #ffc627;
+
+    /* Spring approximations. No spring library is installed, so these are not
+       interruptible or velocity-aware. Acceptable because nothing here is
+       gesture-driven. Add Motion before adding any drag or swipe. */
+    --ease-standard: cubic-bezier(0.32, 0.72, 0, 1);
+    --ease-momentum: cubic-bezier(0.34, 1.36, 0.64, 1);
+    --dur-fast: 120ms;
+    --dur-base: 260ms;
+
+    /* Spacing in rem so a larger user text size scales layout with it. */
+    font: 100% / 1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  body {
+    @apply bg-gray-50 text-foreground antialiased;
+    font-size: 0.9375rem;
+    letter-spacing: 0; /* body sits at zero; tracking is set per size below */
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Tracking is size-specific. One letter-spacing value is wrong somewhere:
+     large text reads too loose, small text too tight. */
+  .type-display {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+  }
+  .type-title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 650;
+  }
+  .type-heading {
+    font-size: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+  .type-caption {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.005em; /* small text takes slightly positive tracking */
+  }
+  .type-mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  /* Focus is always visible, and it is maroon. Never remove it. */
+  :focus-visible {
+    outline: 2px solid var(--asu-maroon);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+}
+
+@layer components {
+  /* --- Materials -----------------------------------------------------------
+     Translucent chrome with content scrolling underneath, not an opaque bar
+     consuming a fixed strip. Never stack a light translucent surface on
+     another; legibility collapses. */
+  .material-chrome {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(24, 24, 27, 0.07);
+  }
+
+  /* Heavier material separates a structural region, mirroring the LEI site's
+     dark Values band. */
+  .material-structural {
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(24px) saturate(140%);
+    -webkit-backdrop-filter: blur(24px) saturate(140%);
+  }
+
+  /* Scroll edge effect instead of a hard 1px divider, applied only where
+     floating chrome actually overlaps content. */
+  .scroll-edge {
+    mask-image: linear-gradient(to bottom, transparent, #000 12px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12px);
+  }
+
+  /* --- ASU accent ----------------------------------------------------------
+     Gold is a background with black on top, or a rule. Never gold text on
+     white: roughly 1.7:1 contrast, fails WCAG. */
+  .asu-highlight {
+    background: var(--asu-gold);
+    color: #000;
+    padding: 0.05em 0.3em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .asu-rule {
+    height: 4px;
+    width: 2.5rem;
+    background: var(--asu-gold);
+    border-radius: 2px;
+  }
+
+  /* --- Interaction ---------------------------------------------------------
+     Feedback fires on pointer-down, not on release. Waiting for click feels
+     dead. Only transform and opacity animate, so this stays on the compositor. */
+  .pressable {
+    transition: transform var(--dur-fast) var(--ease-standard),
+      background-color var(--dur-fast) var(--ease-standard),
+      box-shadow var(--dur-base) var(--ease-standard);
+    will-change: transform;
+  }
+  .pressable:active {
+    transform: scale(0.975);
+  }
+
+  .surface {
+    @apply rounded-lg border border-border bg-card shadow-card;
+    transition: box-shadow var(--dur-base) var(--ease-standard),
+      transform var(--dur-base) var(--ease-standard);
+  }
+  .surface-raised:hover {
+    @apply shadow-float;
+    transform: translateY(-1px);
+  }
+
+  /* Materialise: blur and scale animate together so the surface reads as a
+     real material arriving, not a plain opacity fade. */
+  @keyframes materialize {
+    from {
+      opacity: 0;
+      transform: translateY(6px) scale(0.985);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+      filter: blur(0);
+    }
+  }
+  .materialize {
+    animation: materialize var(--dur-base) var(--ease-standard) both;
+  }
+}
+
+/* Thin scrollbars for the queue list */
+.queue-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.queue-scroll::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-300;
+}
+.queue-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ============================================================================
+   Accessibility. Three independent signals, all handled. Reduced motion does
+   not mean no feedback: it means a gentler, non-vestibular equivalent.
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pressable:active,
+  .surface-raised:hover {
+    transform: none;
+  }
+  .materialize {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .material-chrome {
+    background: #fff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .material-structural {
+    background: #000;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .material-chrome {
+    background: #fff;
+    border-bottom-color: #18181b;
+  }
+  .surface {
+    border-color: #18181b;
+  }
+  .type-caption {
+    color: #18181b;
+  }
+}

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">How a score gets accepted</title>
+<desc id="d">Each question is scored three times by the LLM. For criteria above the gate, unanimous runs are kept, a 2 of 3 majority is kept and flagged for a spot check, and a split goes to blind expert review. Criteria below the gate always go to blind expert review.</desc>
+<style>
+  .bg{fill:#ffffff;stroke:#d0d7de}.ink{fill:#1f2328}.ink2{fill:#59636e}.muted{fill:#6e7781}
+  .box{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+  .grid{stroke:#eaeef2;stroke-width:1}.zero{stroke:#8c959f;stroke-width:1}
+  .gate{stroke:#1f2328;stroke-width:1.5;stroke-dasharray:4 4}
+  .llm{fill:#a12f55}.exp{fill:#4f82c4}.rule{fill:#ffc627}
+  .llmT{fill:#a12f55;fill-opacity:.10;stroke:#a12f55;stroke-width:1.5}
+  .llmF{fill:#a12f55;fill-opacity:.06;stroke:#a12f55;stroke-width:1.5;stroke-dasharray:5 3}
+  .expT{fill:#4f82c4;fill-opacity:.10;stroke:#4f82c4;stroke-width:1.5}
+  .arrow{stroke:#8c959f;stroke-width:1.5;fill:none}.head{fill:#8c959f}
+  .tick{stroke:#1f2328;stroke-width:1.5}
+  .dotFull{fill:#1f2328}.dotRing{fill:none;stroke:#1f2328;stroke-width:1.5}
+  .ci line{stroke:#1f2328;stroke-width:1.5;stroke-opacity:.7}
+  .tnum{font-variant-numeric:tabular-nums}
+  @media (prefers-color-scheme: dark){
+    .bg{fill:#161b22;stroke:#30363d}.ink{fill:#e6edf3}.ink2{fill:#9da7b3}.muted{fill:#848d97}
+    .box{fill:#0d1117;stroke:#30363d}
+    .grid{stroke:#21262d}.zero{stroke:#6e7681}.gate{stroke:#e6edf3}
+    .llm{fill:#d9577a}.exp{fill:#5f97d8}
+    .llmT{fill:#d9577a;fill-opacity:.16;stroke:#d9577a}
+    .llmF{fill:#d9577a;fill-opacity:.08;stroke:#d9577a}
+    .expT{fill:#5f97d8;fill-opacity:.16;stroke:#5f97d8}
+    .arrow{stroke:#6e7681}.head{fill:#6e7681}.tick{stroke:#e6edf3}
+    .dotFull{fill:#e6edf3}.dotRing{stroke:#e6edf3}.ci line{stroke:#e6edf3}
+  }
+</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0.5" y="0.5" width="859" height="499" rx="12"/>
+<rect class="rule" x="32" y="28" width="44" height="4" rx="2"/>
+<text class="ink" x="32" y="62" font-size="22" font-weight="600">How a score gets accepted</text>
+<text class="ink2" x="32.0" y="86.0" font-size="13">Each question is scored three times. The criterion decides what happens to those scores.</text>
+<rect class="box" x="32" y="224" width="112" height="68" rx="10"/>
+<text class="ink" x="88.0" y="252.0" font-size="14" font-weight="600" text-anchor="middle">Question</text>
+<text class="ink2" x="88.0" y="272.0" font-size="12" text-anchor="middle">and its options</text>
+<path class="arrow" d="M144,258 H166" marker-end="url(#ah)"/>
+<rect class="box" x="170" y="206" width="146" height="104" rx="10"/>
+<text class="ink" x="243.0" y="234.0" font-size="14" font-weight="600" text-anchor="middle">LLM scores it</text>
+<text class="ink2" x="243.0" y="252.0" font-size="12" text-anchor="middle">3 separate times</text>
+<rect class="llmT" x="203" y="268" width="22" height="24" rx="6"/>
+<text class="ink tnum" x="214.0" y="285.0" font-size="12.5" font-weight="600" text-anchor="middle">3</text>
+<rect class="llmT" x="231" y="268" width="22" height="24" rx="6"/>
+<text class="ink tnum" x="242.0" y="285.0" font-size="12.5" font-weight="600" text-anchor="middle">3</text>
+<rect class="llmT" x="259" y="268" width="22" height="24" rx="6"/>
+<text class="ink tnum" x="270.0" y="285.0" font-size="12.5" font-weight="600" text-anchor="middle">2</text>
+<path class="arrow" d="M316,258 H330 V172 H344" marker-end="url(#ah)"/>
+<path class="arrow" d="M330,258 V368 H344" marker-end="url(#ah)"/>
+<rect class="box" x="348" y="118" width="168" height="108" rx="10"/>
+<text class="muted" x="364.0" y="142.0" font-size="11.5">Above the gate</text>
+<text class="ink" x="364.0" y="164.0" font-size="13.5" font-weight="600">Linguistic Feature</text>
+<text class="ink" x="364.0" y="184.0" font-size="13.5" font-weight="600">Topic Relevance</text>
+<text class="ink2" x="364.0" y="212.0" font-size="12">agreement check</text>
+<rect class="box" x="348" y="314" width="168" height="108" rx="10"/>
+<text class="muted" x="364.0" y="338.0" font-size="11.5">Below the gate</text>
+<text class="ink" x="364.0" y="360.0" font-size="13.5" font-weight="600">Semantic Uniqueness</text>
+<text class="ink" x="364.0" y="380.0" font-size="13.5" font-weight="600">Semantic Plausibility</text>
+<text class="ink" x="364.0" y="400.0" font-size="13.5" font-weight="600">Writing Clarity</text>
+<path class="arrow" d="M516,172 H528 V126 H540" marker-end="url(#ah)"/>
+<text class="ink2" x="548.0" y="130.5" font-size="12.5">3 of 3 agree</text>
+<rect class="llmT" x="640.0" y="110.0" width="188.0" height="32" rx="16"/>
+<text class="ink" x="734.0" y="130.5" font-size="12.5" font-weight="600" text-anchor="middle">Score kept</text>
+<path class="arrow" d="M516,172 H528 V172 H540" marker-end="url(#ah)"/>
+<text class="ink2" x="548.0" y="176.5" font-size="12.5">2 of 3 agree</text>
+<rect class="llmF" x="640.0" y="156.0" width="188.0" height="32" rx="16"/>
+<text class="ink" x="734.0" y="176.5" font-size="12.5" font-weight="600" text-anchor="middle">Majority kept, spot check</text>
+<path class="arrow" d="M516,172 H528 V218 H540" marker-end="url(#ah)"/>
+<text class="ink2" x="548.0" y="222.5" font-size="12.5">All 3 differ</text>
+<rect class="expT" x="640.0" y="202.0" width="188.0" height="32" rx="16"/>
+<text class="ink" x="734.0" y="222.5" font-size="12.5" font-weight="600" text-anchor="middle">Blind expert review</text>
+<path class="arrow" d="M516,368 H632" marker-end="url(#ah)"/>
+<text class="ink2" x="548.0" y="356.0" font-size="12.5">Always</text>
+<rect class="expT" x="640.0" y="352.0" width="188.0" height="32" rx="16"/>
+<text class="ink" x="734.0" y="372.5" font-size="12.5" font-weight="600" text-anchor="middle">Blind expert review</text>
+<text class="muted" x="640.0" y="402.0" font-size="11.5">LLM score is logged, never shown</text>
+<text class="muted" x="32.0" y="450.0" font-size="11.5">Experts never see the LLM score before entering their own, so it cannot anchor their rating. Every final label records</text>
+<text class="muted" x="32.0" y="466.0" font-size="11.5">where it came from, the three runs and the routing reason. A criterion changes lanes only when its measured agreement clears 0.50.</text>
+</svg>
